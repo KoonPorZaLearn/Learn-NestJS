@@ -71,3 +71,33 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## Run Mongo Replica 27018, 27019, 27020
+
+PC: Use in path C:\Program Files\MongoDB\Server\7.0\bin
+
+```bash
+# 27018
+$ start mongod -replSet replset_mongo -logpath D:\replica_mongo\r1\r1.log --dbpath D:\replica_mongo\r1 --port 27018
+
+# 27019
+$ start mongod -replSet replset_mongo -logpath D:\replica_mongo\r2\r2.log --dbpath D:\replica_mongo\r2 --port 27019
+
+# 27020
+$ start mongod -replSet replset_mongo -logpath D:\replica_mongo\r3\r3.log --dbpath D:\replica_mongo\r3 --port 27020
+```
+
+Laptop: Use in path C:\Program Files\MongoDB\Server\7.0\bin
+
+```bash
+# 27018
+$ start mongod -replSet replset_mongo -logpath \replica_mongo\rs1\rs1.log --dbpath \replica_mongo\rs1 --port 27018
+
+# 27019
+$ start mongod -replSet replset_mongo -logpath \replica_mongo\rs2\rs2.log --dbpath \replica_mongo\rs2 --port 27019
+
+# 27020
+$ start mongod -replSet replset_mongo -logpath \replica_mongo\rs3\rs3.log --dbpath \replica_mongo\rs3 --port 27020
+```
+
+From: [Youtube](https://www.youtube.com/watch?v=mkCyKBtAcYI)
